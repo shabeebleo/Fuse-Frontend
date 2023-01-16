@@ -2,7 +2,6 @@ import axios from "../../axios/axios";
 import React, { useEffect, useRef } from "react";
 import { useState } from "react";
 import "./ChatBox.css";
-
 import moment from 'moment'
 import InputEmoji from "react-input-emoji";
 function ChatBox({ chat, currentUser, setSendMessage, receiveMessage }) {

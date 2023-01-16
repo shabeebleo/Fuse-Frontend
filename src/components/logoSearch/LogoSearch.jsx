@@ -6,6 +6,7 @@ import "./LogoSearch.css";
 import axios from "../../axios/axios";
 import { useSelector } from "react-redux";
 import { UilTimes } from "@iconscout/react-unicons";
+
 function LogoSearch() {
   const [query, setQuery] = useState("");
   const [data, setData] = useState(null);
