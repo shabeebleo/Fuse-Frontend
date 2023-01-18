@@ -23,7 +23,7 @@ function Chat() {
 
 
   const user = userData;
-
+  const socketurl = process.env.REACT_APP_SOCKET_URL
   // send message to socket server
   useEffect(() => {
     if (sendMessage != null) {
@@ -32,7 +32,7 @@ function Chat() {
   }, [sendMessage]);
 
   useEffect(() => {
-    socket.current = io("ws://localhost:8800");
+    socket.current = io(socketurl);
     socket.current.emit("new-user-add", user?._id);
     socket.current.on("get-users", (users) => {
       setOnlineUsers(users);
