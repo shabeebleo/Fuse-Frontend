@@ -84,7 +84,7 @@ function Auth() {
         </div>
       </div>
       {/* right side */}
-      <h1>{isSignUp ? SignUp() : Login()}</h1>
+      <div>{isSignUp ? SignUp() : Login()}</div>
     </div>
   );
   //login
