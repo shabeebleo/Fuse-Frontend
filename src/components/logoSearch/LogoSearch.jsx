@@ -56,7 +56,7 @@ function LogoSearch() {
     <div className="searchPart">
       {" "}
       <div className="LogoSearch">
-        <img
+        <img 
           onClick={() => {
             navigate("/home");
           }}

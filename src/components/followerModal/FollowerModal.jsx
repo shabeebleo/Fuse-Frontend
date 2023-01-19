@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import axios from "../../axios/axios";
 import "./FollowerModal.css";
 export const FollowerModal = ({ modalOpened, setModalOpened ,profileUserId,followerClick}) => {
-
+  console.log("in thi try getfollowers")
   const { userData } = useSelector((state) => state.user);
   const userId = userData?._id;
   // const [users, setUsers] = useState([]);
@@ -14,7 +14,7 @@ export const FollowerModal = ({ modalOpened, setModalOpened ,profileUserId,follo
 //to get follower data.....
   const getFollowers = async () => {
     if(followerClick){
-      console.log("in thi try getfollowers")
+      console.log("in thi try getfollowers getFollowers")
       try {
         const response = await axios.get(`/user/followers/${profileUserId?profileUserId:userId}`,{
           headers: {
@@ -27,15 +27,32 @@ export const FollowerModal = ({ modalOpened, setModalOpened ,profileUserId,follo
       } catch (error) {
         console.log(error);
       }
+    }else{
+      console.log("in thi try getfollowers  getFolloing")
+      try {
+        const response = await axios.get(`/user/following/${profileUserId?profileUserId:userId}`,{
+          headers: {
+            Authorization: "Bearer " + localStorage.getItem("token")
+          },
+        });
+  
+        console.log(response.data,"getData ethi mon     getFollowings");
+        setFollowers(response.data)
+      } catch (error) {
+        console.log(error);
+      }
     }
    
   };
   useEffect(() => {
     getFollowers();
-    // eslint-disable-next-line
-  }, [userData]);
   
-
+  }, [modalOpened]);
+    // eslint-disable-next-line
+const onclose=()=>{
+  setModalOpened(false);
+  setFollowers([])
+}
 
   return (
     <Modal
@@ -48,14 +65,12 @@ export const FollowerModal = ({ modalOpened, setModalOpened ,profileUserId,follo
       overlayBlur={3}
       size="30%"rs
       opened={modalOpened}
-      onClose={() => {
-        setModalOpened(false);
-      }}
+      onClose={onclose}
     >
       <div className="FollowersCard">followerModal
       {followers.map((follower, id) => {
         return (
-          <div className="follower">
+          <div key={id} className="follower">
             <div>
 
             <img src={follower.profilePicture} className="followerImg" alt="" />

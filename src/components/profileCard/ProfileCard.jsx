@@ -32,6 +32,7 @@ function ProfileCard() {
           alt=""
         />
         <img
+          style={{ cursor: "pointer" }}
           onClick={() => {
             navigate("/profile", {
               state: {
@@ -59,31 +60,31 @@ function ProfileCard() {
         <hr />
         <div>
           <div className="follow">
-            <div>
-              <span
-                onClick={() => {
-                  followersModal(setfollowerClick(true));
-                }}
-              >
-                followers{" "}
-              </span>
-              <FollowerModal
-                modalOpened={modalOpened}
-                setModalOpened={setModalOpened}
-                profileUserId={profileUserId}
-                followerClick={followerClick}
-              />
-            </div>
+            <span
+              style={{ cursor: "pointer" }}
+              onClick={() => {
+                followersModal(setfollowerClick(true));
+              }}
+            >
+              followers{" "}
+            </span>
 
             <span>
               {profileDetails
                 ? profileDetails.followers.length
                 : userData?.followers.length}
             </span>
+            <FollowerModal
+              modalOpened={modalOpened}
+              setModalOpened={setModalOpened}
+              profileUserId={profileUserId}
+              followerClick={followerClick}
+            />
           </div>
           <div className="vl"></div>
           <div className="follow">
             <span
+              style={{ cursor: "pointer" }}
               onClick={() => {
                 followersModal(setfollowerClick(false));
               }}

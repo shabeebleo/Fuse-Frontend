@@ -8,9 +8,11 @@ import { setPosts } from "../../redux/postSlice";
 import { hideloading, showloading } from "../../redux/alertSlice";
 import { toast } from "react-hot-toast";
 import axios from "../../axios/axios";
+import { useNavigate } from "react-router-dom";
 
 function PostShare() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { userData } = useSelector((state) => state.user);
   const userId = userData?._id;
   const [image, setImage] = useState(null);
@@ -89,7 +91,13 @@ function PostShare() {
 
   return (
     <div className="PostShare">
-      <img src={Profile} alt="" />
+      <img style={{cursor:"pointer"}} src={Profile} alt=""     onClick={() => {
+            navigate("/profile", {
+              state: {
+                userData: userData,
+              },
+            });
+          }} />
 
       <form encType="multipart/form-data" onSubmit={handleSubmit}>
         <input

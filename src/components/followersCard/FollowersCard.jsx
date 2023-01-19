@@ -92,7 +92,7 @@ function FollowersCard() {
         return (
           <div className="follower" key={id}>
             <div>
-              <img
+              <img style={{cursor:"pointer"}}
                 onClick={() => {
                   openProfile(follower, follower._id);
                 }}
