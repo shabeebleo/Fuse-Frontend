@@ -23,7 +23,7 @@ function Chat() {
 
 
   const user = userData;
-  const socketurl = process.env.REACT_APP_SOCKET_URL
+  const socketurl = "ws://localhost:8800"
   // send message to socket server
   useEffect(() => {
     if (sendMessage != null) {
