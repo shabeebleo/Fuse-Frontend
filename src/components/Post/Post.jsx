@@ -24,7 +24,7 @@ function Post({ data }) {
   const postId = data._id;
   // console.log(userId, "for likepost");
   useEffect(() => {
-    if (data.likes.length > 0) {
+    if (data.likes.includes(userId) ) {
       setLiked(true);
     } else {
       setLiked(false);

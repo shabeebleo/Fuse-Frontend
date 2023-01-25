@@ -106,7 +106,7 @@ function Auth() {
           </div>
           <div>
             <input
-              type="text"
+              type="password"
               placeholder="Password"
               className="infoInput"
               name="password"
@@ -179,7 +179,7 @@ function Auth() {
           </div>
           <div>
             <input
-              type="text"
+              type="password"
               placeholder="Password"
               className="infoInput"
               name="password"
@@ -187,7 +187,7 @@ function Auth() {
               value={data.password}
             />
             <input
-              type="text"
+              type="password"
               placeholder="Confirm Password"
               className="infoInput"
               name="confirmpass"

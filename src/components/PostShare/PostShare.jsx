@@ -109,7 +109,7 @@ function PostShare() {
           placeholder="what's happening"
         />
         <div className="postOptions">
-          <div
+          `<div
             className="options"
             style={{ color: "var(--photo)" }}
             onClick={() => imageRef.current.click()}
@@ -153,7 +153,6 @@ function PostShare() {
                 setImage(null);
               }}
             />
-
             <img src={URL.createObjectURL(image.image)} alt="" />
           </div>
         )}

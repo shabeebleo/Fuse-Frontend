@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "./Chat.css";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import LogoSearch from "../../components/logoSearch/LogoSearch";
+import LogoSearch from "../../components/LogoSearch/LogoSearch";
 import axios from "../../axios/axios";
 import Conversation from "../../components/Conversation/Conversation";
 import Comment from "../../img/comment.png";
