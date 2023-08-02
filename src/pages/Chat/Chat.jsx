@@ -23,7 +23,7 @@ function Chat() {
 
 
   const user = userData;
-  const socketurl = "ws://localhost:8800"
+  const socketurl = "https://socket-fig9.onrender.com"
   // send message to socket server
   useEffect(() => {
     if (sendMessage != null) {
