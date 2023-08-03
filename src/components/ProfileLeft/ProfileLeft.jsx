@@ -1,8 +1,8 @@
 import React from 'react'
 import './ProfileLeft.css'
-import LogoSearch from '../LogoSearch/LogoSearch'
+import LogoSearch from '../logoSearch/LogoSearch'
 import InfoCard from '../InfoCard/InfoCard'
-import FollowersCard from '../FollowersCard/FollowersCard'
+import FollowersCard from '../followersCard/FollowersCard'
 function ProfileLeft() {
   return (
     <div className='ProfileLeft'>

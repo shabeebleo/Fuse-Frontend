@@ -1,7 +1,7 @@
 import React from "react";
 import ProfileLeft from "../../components/ProfileLeft/ProfileLeft";
 import "./Profile.css";
-import ProfileCard from "../../components/ProfileCard/ProfileCard";
+import ProfileCard from "../../components/profileCard/ProfileCard";
 import PostSide from "../../components/PostSide/PostSide";
 import RightSide from "../../components/RightSide/RightSide";
 

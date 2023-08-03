@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./ProfileCard.css";
 import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
-import { FollowerModal } from "../FollowerModal/FollowerModal";
+import { FollowerModal } from "../followerModal/FollowerModal";
 import { useNavigate } from "react-router-dom";
 function ProfileCard() {
   const navigate = useNavigate();

@@ -1,10 +1,10 @@
 import "./App.css";
 import Auth from "./pages/Auth/Auth";
-import Home from "./pages/Home/Home";
+import Home from "./pages/home/Home";
 import Chat from "./pages/Chat/Chat";
 import AdminLogin from "./pages/Admin/AdminLogin";
 import Profile from "./pages/Profile/Profile";
-import AdminHome from "./pages/Admin/AdminHome";
+import {AdminHome} from "./pages/Admin/AdminHome";
 import AdminUserlist from "./pages/Admin/AdminUserlist";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
@@ -64,7 +64,7 @@ function App() {
             }
           />
           <Route path="/admin" element={<AdminLogin />} />
-          <Route path="/adminHome" element={<ProtectedRouteAdmin><AdminHome /></ProtectedRouteAdmin>} />
+          <Route path="/adminHome" element={<ProtectedRouteAdmin><AdminHome /> </ProtectedRouteAdmin>} />
           <Route path="/userList" element={<ProtectedRouteAdmin><AdminUserlist /></ProtectedRouteAdmin>} />
         </Routes>
       </div>

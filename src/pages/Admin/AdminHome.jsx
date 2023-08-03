@@ -2,7 +2,7 @@ import React from "react";
 import AdminLayout from "./AdminLayout";
 
 
-function AdminHome() {
+export function AdminHome() {
  return (
     <AdminLayout>
       <div>
@@ -12,4 +12,4 @@ function AdminHome() {
   );
 }
 
-export default AdminHome;
+// export default AdminHome;
